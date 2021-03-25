@@ -119,7 +119,23 @@ export class MetadataStorage {
   collectExtensionsFieldMetadata(definition: ExtensionsFieldMetadata) {
     this.fieldExtensions.push(definition);
   }
-
+  substitute(subst: { [name: string]: Function }) {
+    this.objectTypes = this.objectTypes.filter(o => !subst[o.name]);
+    function updateField(o: FieldResolverMetadata | FieldMetadata) {
+      const type = o.getType?.();
+      if (!type) {
+        return;
+      }
+      // @ts-ignore
+      const newType = subst[type.name];
+      if (newType) {
+        o.getType = () => newType;
+      }
+      return o;
+    }
+    this.fields.forEach(updateField);
+    this.fieldResolvers.forEach(updateField);
+  }
   build(options: SchemaGeneratorOptions) {
     // TODO: disable next build attempts
 

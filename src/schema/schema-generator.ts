@@ -101,6 +101,10 @@ export interface SchemaGeneratorOptions extends BuildContextOptions {
    * Array of graphql directives
    */
   directives?: GraphQLDirective[];
+  /**
+   * Substitute types
+   */
+  substituteTypes?: { [name: string]: Function };
 }
 
 export abstract class SchemaGenerator {
@@ -125,6 +129,9 @@ export abstract class SchemaGenerator {
   static generateFromMetadataSync(options: SchemaGeneratorOptions): GraphQLSchema {
     this.checkForErrors(options);
     BuildContext.create(options);
+    if (options.substituteTypes) {
+      getMetadataStorage().substitute(options.substituteTypes);
+    }
     getMetadataStorage().build(options);
     this.buildTypesInfo(options.resolvers);
 
@@ -139,7 +146,7 @@ export abstract class SchemaGenerator {
       ...prebuiltSchema.toConfig(),
       // run after first build to make `usedInterfaceTypes` working
       types: this.buildOtherTypes(orphanedTypes),
-    })
+    });
 
     BuildContext.reset();
     this.usedInterfaceTypes = new Set<Function>();
