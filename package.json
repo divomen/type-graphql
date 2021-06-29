@@ -1,6 +1,6 @@
 {
   "name": "@realfriend/type-graphql",
-  "version": "1.1.1-patched1",
+  "version": "1.1.1-patched2",
   "author": {
     "name": "Michał Lytek",
     "url": "https://github.com/MichalLytek"
@@ -19,7 +19,9 @@
     "verify": "npm run check && npm run lint",
     "package": "gulp package",
     "docs": "npm run --prefix website start",
-    "//postinstall": "node ./dist/postinstall || exit 0"
+    "//postinstall": "node ./dist/postinstall || exit 0",
+    "build": "tsc --build tsconfig.package.json",
+    "publish": ""
   },
   "peerDependencies": {
     "class-validator": ">=0.12.0",

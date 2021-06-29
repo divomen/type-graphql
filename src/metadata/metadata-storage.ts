@@ -121,7 +121,7 @@ export class MetadataStorage {
   }
   substitute(subst: { [name: string]: Function }) {
     this.objectTypes = this.objectTypes.filter(o => !subst[o.name]);
-    function updateField(o: FieldResolverMetadata | FieldMetadata) {
+    function updateGetType(o: FieldResolverMetadata | FieldMetadata) {
       const type = o.getType?.();
       if (!type) {
         return;
@@ -131,10 +131,22 @@ export class MetadataStorage {
       if (newType) {
         o.getType = () => newType;
       }
-      return o;
     }
-    this.fields.forEach(updateField);
-    this.fieldResolvers.forEach(updateField);
+    function updateGetReturnType(o: ResolverMetadata) {
+      const type = o.getReturnType?.();
+      if (!type) {
+        return;
+      }
+      // @ts-ignore
+      const newType = subst[type.name];
+      if (newType) {
+        o.getReturnType = () => newType;
+      }
+    }
+    this.fields.forEach(updateGetType);
+    this.fieldResolvers.forEach(updateGetType);
+    this.queries.forEach(updateGetReturnType);
+    this.mutations.forEach(updateGetReturnType);
   }
   build(options: SchemaGeneratorOptions) {
     // TODO: disable next build attempts
