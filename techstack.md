@@ -1,7 +1,8 @@
 <!--
---- Readme.md Snippet without images Start ---
+&lt;--- Readme.md Snippet without images Start ---&gt;
 ## Tech Stack
 divomen/type-graphql is built on the following main stack:
+
 - [Jest](http://facebook.github.io/jest/) – Javascript Testing Framework
 - [Node.js](http://nodejs.org/) – Frameworks (Full Stack)
 - [.NET](http://www.microsoft.com/net/) – Frameworks (Full Stack)
@@ -22,11 +23,13 @@ divomen/type-graphql is built on the following main stack:
 - [GitHub Actions](https://github.com/features/actions) – Continuous Integration
 
 Full tech stack [here](/techstack.md)
---- Readme.md Snippet without images End ---
 
---- Readme.md Snippet with images Start ---
+&lt;--- Readme.md Snippet without images End ---&gt;
+
+&lt;--- Readme.md Snippet with images Start ---&gt;
 ## Tech Stack
 divomen/type-graphql is built on the following main stack:
+
 - <img width='25' height='25' src='https://img.stackshare.io/service/830/jest.png' alt='Jest'/> [Jest](http://facebook.github.io/jest/) – Javascript Testing Framework
 - <img width='25' height='25' src='https://img.stackshare.io/service/1011/n1JRsFeB_400x400.png' alt='Node.js'/> [Node.js](http://nodejs.org/) – Frameworks (Full Stack)
 - <img width='25' height='25' src='https://img.stackshare.io/service/1014/IoPy1dce_400x400.png' alt='.NET'/> [.NET](http://www.microsoft.com/net/) – Frameworks (Full Stack)
@@ -47,14 +50,15 @@ divomen/type-graphql is built on the following main stack:
 - <img width='25' height='25' src='https://img.stackshare.io/service/11563/actions.png' alt='GitHub Actions'/> [GitHub Actions](https://github.com/features/actions) – Continuous Integration
 
 Full tech stack [here](/techstack.md)
---- Readme.md Snippet with images End ---
+
+&lt;--- Readme.md Snippet with images End ---&gt;
 -->
 <div align="center">
 
 # Tech Stack File
 ![](https://img.stackshare.io/repo.svg "repo") [divomen/type-graphql](https://github.com/divomen/type-graphql)![](https://img.stackshare.io/public_badge.svg "public")
 <br/><br/>
-|56<br/>Tools used|11/09/23 <br/>Report generated|
+|58<br/>Tools used|01/04/24 <br/>Report generated|
 |------|------|
 </div>
 
@@ -283,9 +287,9 @@ Full tech stack [here](/techstack.md)
 </table>
 
 
-## <img src='https://img.stackshare.io/group.svg' /> Open source packages (32)</h2>
+## <img src='https://img.stackshare.io/group.svg' /> Open source packages (34)</h2>
 
-## <img width='24' height='24' src='https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png'/> npm (32)
+## <img width='24' height='24' src='https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png'/> npm (34)
 
 |NAME|VERSION|LAST UPDATED|LAST UPDATED BY|LICENSE|VULNERABILITIES|
 |:------|:------|:------|:------|:------|:------|
@@ -309,7 +313,9 @@ Full tech stack [here](/techstack.md)
 |[gulp-shell](https://www.npmjs.com/gulp-shell)|v0.8.0|01/09/21|Michał Lytek |MIT|N/A|
 |[gulp-typescript](https://www.npmjs.com/gulp-typescript)|v5.0.1|02/28/21|Michał Lytek |MIT|N/A|
 |[gulpclass](https://www.npmjs.com/gulpclass)|v0.2.0|02/28/21|Michał Lytek |Apache-2.0|N/A|
+|[husky](https://www.npmjs.com/husky)|v4.3.8|02/28/21|Michał Lytek |MIT|N/A|
 |[ioredis](https://www.npmjs.com/ioredis)|v4.23.0|02/28/21|Michał Lytek |MIT|N/A|
+|[lint-staged](https://www.npmjs.com/lint-staged)|v10.5.4|02/28/21|Michał Lytek |MIT|N/A|
 |[parcel-bundler](https://www.npmjs.com/parcel-bundler)|v1.12.4|12/07/19|Michał Lytek |MIT|N/A|
 |[pg](https://www.npmjs.com/pg)|v8.5.1|01/09/18|Michał [Desktop] |MIT|N/A|
 |[react-apollo](https://www.npmjs.com/react-apollo)|v3.1.3|03/14/20|Michał Lytek |MIT|N/A|
@@ -325,4 +331,4 @@ Full tech stack [here](/techstack.md)
 <br/>
 <div align='center'>
 
-Generated via [Stack File](https://github.com/apps/stack-file)
+Generated via [Stack File](https://github.com/marketplace/stack-file)
